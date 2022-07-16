@@ -33,4 +33,10 @@ class ContactForm(forms.Form):
         if not "gmail.com , yahoo.com" in email:
             raise forms.ValidationError("Email has to be gmail.com or yahoo.com")
         return email
+
+class LoginForm(forms.Form):
+    username = forms.CharField()
+    password = forms.CharField(widget=forms.PasswordInput)
+
+
         
